@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pokemons</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pokemons</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pokemons["results"].length.times do |i| %>
+      <tr>
+        <td><%= @pokemons["results"][i]["name"] %></td>
+        <td><%= @pokemons["results"][i]["url"] %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pokemon', new_pokemon_path %>
